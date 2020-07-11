@@ -18,6 +18,11 @@ export const employeeListSample = [
   },
 ];
 
+export const employeeHttpResponse = {
+  data: employeeListSample,
+  status: "success"
+}
+
 export class EmployeesServiceMock {
   getEmployeesList(): Observable<IEmployee[]> {
     return of(employeeListSample)
