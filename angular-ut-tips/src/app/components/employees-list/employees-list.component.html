@@ -1,0 +1,19 @@
+<div class="row employee-columns-header">
+  <div class="col-md-3">Name</div>
+  <div class="col-md-3">Salary</div>
+  <div class="col-md-3">Age</div>
+  <div class="col-md-3">
+    <button class="btn btn-primary" (click)="openNewEmployeeModal()">+</button>
+  </div>
+</div>
+
+<div class="employees-wrapper">
+  <div class="row employee-container" *ngFor="let employee of employees$ | async; let employeeIndex = index">
+    <div class="col-md-3">{{employee.employee_name | employeeName}}</div>
+    <div class="col-md-3">{{employee.employee_salary}}</div>
+    <div class="col-md-3" highlight>{{employee.employee_age}}</div>
+    <div class="col-md-3">
+      <button class="btn btn-danger" (click)="deleteEmployee(employee, employeeIndex)">X</button>
+    </div>
+  </div>
+</div>

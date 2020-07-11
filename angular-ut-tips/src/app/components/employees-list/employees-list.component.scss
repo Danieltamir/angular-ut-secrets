@@ -1,0 +1,33 @@
+:host{
+
+  .employee-columns-header {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 0.8%;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  .employees-wrapper {
+    max-height: 87vh;
+    overflow: scroll;
+
+    .employee-container {
+      width: 80%;
+      padding: 1em 0em;
+      box-shadow: 1px 1px 1px 1px grey;
+      margin-left: 10%;
+      margin-top: 1%;
+      padding-top: 2em;
+      border-radius: 5px;
+      background: white;
+    }
+  }
+
+  .btn {
+    float: right;
+    position: relative;
+    right: 4%;
+    top: -22%;
+  }
+}
