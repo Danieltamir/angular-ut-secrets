@@ -1,7 +1,4 @@
-import {Observable, of} from "rxjs";
-import {IEmployee} from "../../app/models/employee.model";
-
-export const employeeListSample = [
+export const employeesListSample = [
   {
     employee_age: '29',
     employee_name: 'Daniel',
@@ -19,16 +16,6 @@ export const employeeListSample = [
 ];
 
 export const employeeHttpResponse = {
-  data: employeeListSample,
+  data: employeesListSample,
   status: "success"
-}
-
-export class EmployeesServiceMock {
-  getEmployeesList(): Observable<IEmployee[]> {
-    return of(employeeListSample)
-  }
-
-  deleteEmployee(employeeIndex: number) {
-    return of({});
-  }
 }

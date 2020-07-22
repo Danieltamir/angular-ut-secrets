@@ -3,7 +3,7 @@ import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 import {Component} from "@angular/core";
 import {By} from "@angular/platform-browser";
 
-fdescribe('HighlightDirective', () => {
+describe('HighlightDirective', () => {
   let fixture: ComponentFixture<DummyComponent>;
   let dummyComponent: DummyComponent;
 
@@ -18,22 +18,22 @@ fdescribe('HighlightDirective', () => {
   }));
 
   it('should properly highlight the element on mouseover', () => {
-    const elementToHightlight = fixture.debugElement.query(By.css('.element-to-highlight'));
+    const selector = '.element-to-highlight';
+    const el = fixture.debugElement.query(By.css(selector));
 
-    elementToHightlight.triggerEventHandler('mouseenter',{});
+    el.triggerEventHandler('mouseenter',{});
+    expect(el.nativeElement.style.color).toEqual('red');
 
-    expect(elementToHightlight.styles.color).toEqual('red');
-
-    elementToHightlight.triggerEventHandler('mouseleave',{});
-
-    expect(elementToHightlight.styles.color).not.toEqual('red');
+    el.triggerEventHandler('mouseleave',{});
+    expect(el.nativeElement.style.color).toEqual('');
   });
 });
 
 @Component({
-  selector: 'app-employees-list',
+  selector: 'dummy-component',
   template: `
-    <div class="element-to-highlight" highlight></div>`
+    <div class="element-to-highlight" highlight>Highlighted Text</div>
+  `
 })
 export class DummyComponent {
 }

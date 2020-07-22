@@ -1,0 +1,3 @@
+<button class="btn btn-primary" (click)="alertCompanyName()">Alert Company</button>
+
+<div *ngIf="companyName" [ngClass]="{'tufin': companyName === 'Tufin'}" class="company-name">{{companyName}}</div>
