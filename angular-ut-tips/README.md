@@ -1,6 +1,6 @@
-# AngularUtTips
+# Angular UT Code Examples
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+In the repo you can find all the code examples from the meetup! 🚀
 
 ## Development server
 
